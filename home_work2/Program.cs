@@ -819,6 +819,136 @@ Console.WriteLine("most frequnt: {0}",mostFrequent);
 
 */
 
+/*
+//برنامه ای بنویسید که شماره دانشجویی و کد رشته تحصیلی تعدای دانشجو را دریافت و شماره
+//دانشجویی را به تفکیک کد رشته تحصیلی بنویسد
+
+Console.Write("count index of first array:");
+int n1 = int.Parse(Console.ReadLine());
+int[,] array1 = new int[n1,2];
+for (int i = 0; i < n1; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        Console.Write("enter student code for student{0}:",i+1);
+        array1[i,j] = int.Parse(Console.ReadLine());
+        j++;
+
+        Console.Write("enter catqury code for student{0}:",i+1);
+        array1[i, j] = int.Parse(Console.ReadLine());
+        j++;
+
+    }
+    Console.WriteLine();
+    
+}
+
+
+
+
+int[] sortByCat = new int[n1];
+
+for (int a = 0; a < n1; a++)
+{
+
+    sortByCat[a] = Convert.ToInt32(array1[a, 1]);
+}
+Array.Sort(sortByCat);
+
+
+
+for (int x = 0; x < n1; x++)
+{
+    for (int y = 0; y < n1; y++)
+    {
+        if (sortByCat[x] == Convert.ToInt32(array1[y, 1]))
+        {
+            for (int z = 0; z < 2; z++)
+            {
+                Console.Write(array1[y, z] + " ");
+            }
+            Console.WriteLine();
+
+        }
+    }
+}
+
+*/
+
+/*
+//برنامه ای بنویسید که مشخصات تعدادی دانشجو شامل شماره دانشجویی و کد مقطع تحصیلی را
+//دریافت سپس دانشجویان هر مقطع را به تفکیک چاپ نماید. کاردانی : 1کارشناسی  2ارشد 3
+//دکتری 4
+
+Console.Write("count index of first array:");
+int n1 = int.Parse(Console.ReadLine());
+int[,] array1 = new int[n1, 2];
+bool isOutOff = false;
+
+for (int i = 0; i < n1; i++)
+{
+    for (int j = 0; j < 2; j++)
+    {
+        Console.Write("enter student code for student{0}:", i + 1);
+        array1[i, j] = int.Parse(Console.ReadLine());
+        j++;
+
+        
+        Console.Write("enter maqhta code for student{0} [1:4]:", i + 1);
+        array1[i, j] = int.Parse(Console.ReadLine());
+        
+
+        if (Convert.ToInt32( array1[i, j]) >= 4)
+        { 
+        isOutOff = true;
+        
+        }
+
+        j++;
+
+
+
+    }
+    if (isOutOff)
+    {
+        Console.WriteLine("the input number is out of renge!!");
+        break;
+    }
+
+    Console.WriteLine();
+
+}
+
+
+
+int[] sortByCat = new int[n1];
+
+for (int a = 0; a < n1; a++)
+{
+
+    sortByCat[a] = Convert.ToInt32(array1[a, 1]);
+}
+Array.Sort(sortByCat);
+
+
+
+for (int x = 0; x < n1; x++)
+{
+    for (int y = 0; y < n1; y++)
+    {
+        if (sortByCat[x] == Convert.ToInt32(array1[y, 1]))
+        {
+            for (int z = 0; z < 2; z++)
+            {
+                Console.Write(array1[y, z] + " ");
+            }
+            Console.WriteLine();
+
+        }
+    }
+}
+*/
+
 
 
 
