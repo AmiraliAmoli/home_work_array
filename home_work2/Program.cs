@@ -782,3 +782,43 @@ else
 */
 
 
+/*
+//برنامه ای بنویسید که با دریافت لیست عدد؛ عددی که بیشترین تکرار را دارد در خروجی چاپ
+//نماید
+Console.Write("count index of first array:");
+int n1 = int.Parse(Console.ReadLine());
+int[] array1 = new int[n1];
+for (int i = 0; i < n1; i++)
+{
+    Console.Write("enter index {0}:", i);
+    array1[i] = int.Parse(Console.ReadLine());
+}
+
+int maxCount = 0;
+int mostFrequent = array1[0];
+
+for (int i = 0; i < n1; i++)
+{
+    int count = 0;
+    for (int j = 0; j < n1; j++)
+    {
+        if (array1[i] == array1[i])
+        {
+            count++;
+        }
+    }
+
+    if (count > maxCount)
+    {
+        maxCount = count;
+        mostFrequent = array1[i];
+    }
+}
+
+Console.WriteLine("most frequnt: {0}",mostFrequent);
+
+*/
+
+
+
+
