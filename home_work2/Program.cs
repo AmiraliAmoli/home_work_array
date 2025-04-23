@@ -264,3 +264,294 @@ for (int x = 0; x < counter; x++)
 }
 
 */
+
+
+
+/*
+//برنامه ای بنویسید که مشخص کند یک عدد خاص در آرایه وجود دارد یا خیر؟ در صورت وجود
+//اندیس آن را چاپ کند
+
+int[] array = {15,210,10,546,151,0,6 };
+
+Console.Write("enter number:");
+int input =Convert.ToInt32(Console.ReadLine());
+
+int i;
+for (i = 0; i < array.Length; i++)
+{
+    if (array[i] == input)
+    {
+        Console.WriteLine(i);
+        break;
+    }
+
+}
+if(i == array.Length)
+{
+    Console.WriteLine("yor number is not in array");
+}
+*/
+
+
+
+/*
+ //برنامه ای بنویسید که یک عدد خاص را از یک آرایه حذف کند
+
+int[] mainArry = { 10, 5, 87, 45, 95, 87, 15, 545, 87, 415, 0 };
+
+Console.Write("number there are in array:");
+for (int i = 0;i<mainArry.Length; i++)
+{
+    Console.Write(mainArry[i]+" ");
+}
+Console.WriteLine();
+
+
+
+Console.Write("wich one do you want to delet?:");
+int indexDel=Convert.ToInt32(Console.ReadLine());
+
+
+int count = 0;
+
+foreach (int item in mainArry)
+{
+    if (item != indexDel)
+    {
+        count++;
+    }
+
+}
+
+int[] newArray =new int[count];
+int index = 0;
+
+foreach (int item in mainArry)
+{
+    if (item != indexDel)
+    {
+        newArray[index++] = item;
+    }
+}
+
+for (int a = 0; a < newArray.Length; a++)
+{
+    Console.Write(newArray[a]+" ");
+}
+*/
+
+
+/*
+ //برنامه ای بنوسید که یک آرایه را در آرایه دیگر کپی کند
+
+int[] first = { 5, 10, 415, 8789, 64565, 145, 4, 41, 4, 415645, };
+
+int[] second = new int[first.Length];
+
+for (int i = 0; i < first.Length; i++)
+{ 
+    second[i] = first[i];
+}
+
+for (int i = 0; i < first.Length; i++)
+{
+    Console.WriteLine(second[i]);
+}
+*/
+
+
+
+/*
+ //برنامه ای بنویسید که یک عدد را در مکان مورد نظر یک آرایه درج نماید
+
+
+Console.Write("array:");
+int[] first = { 5, 10, 415, 8789, 64565, 145, 4, 41, 4, 415645};
+
+for (int i = 0; i < first.Length; i++)
+{ 
+    Console.Write(first[i]+" ");
+}
+Console.WriteLine();
+
+Console.Write("inter the index you replace:");
+int replace = Convert.ToInt32(Console.ReadLine());
+
+Console.Write("inter the number you replace:");
+int number = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine();
+
+
+if (replace >= 0 && replace<first.Length)
+first[replace] = number;
+
+for (int i = 0; i < first.Length; i++)
+{ 
+    Console.Write(first[i]+" ");
+}
+*/
+
+
+
+/*
+ //برنامه ای بنویسید که مقادیر تکراری یک ارایه را چاپ نماید
+
+
+int[] array = { 1, 3, 5, 3, 7, 1, 9, 5 };
+
+
+Console.WriteLine("repare valu:");
+
+for (int i = 0; i < array.Length; i++)
+{
+    bool isDuplicate = false;
+
+    for (int k = 0; k < i; k++)
+    {
+        if (array[i] == array[k])
+                {
+                    isDuplicate = true;
+                    break;
+                }
+    }
+
+    if (isDuplicate)
+    continue;
+
+    int count = 0;
+
+   for (int j = 0; j < array.Length; j++)
+   {
+    if (array[i] == array[j])
+    {
+     count++;
+    }
+   }
+
+    if (count > 1)
+    {
+      Console.WriteLine(array[i] + " (replay: " + count + ")");
+    }
+}
+*/
+
+/*
+
+ //برنامه ای بنویسید که مقادیر تکراری دو آرایه متفاوت را چاپ نماید
+
+
+int[] array1 = { 1, 321, 5, 7, 9 };
+int[] array2 = { 2, 3, 4, 5, 10,321 };
+
+Console.WriteLine("repetitive valu:");
+
+for (int i = 0; i < array1.Length; i++)
+{
+    bool alreadyPrinted = false;
+
+    for (int k = 0; k < i; k++)
+    {
+        if (array1[i] == array1[k])
+        {
+            alreadyPrinted = true;
+            break;
+        }
+    }
+
+    if (alreadyPrinted)
+        continue;
+
+    for (int j = 0; j < array2.Length; j++)
+    {
+        if (array1[i] == array2[j])
+        {
+            Console.WriteLine(array1[i]);
+            break;
+        }
+    }
+}
+
+*/
+
+/*
+
+ //برنامه ای بنویسید که مقادیر تکراری یک آرایه را حذف نماید.
+
+
+Console.Write("array:");
+int[] array = { 1, 3, 5, 3, 7, 5, 9, 5 };
+foreach (int i in array)
+    Console.Write(i+" ");
+Console.WriteLine();
+
+
+int[] array2 = new int[array.Length];
+int Count = 0;
+
+for (int i = 0; i < array.Length; i++)
+{
+    bool isDuplicate = false;
+
+    for (int j = 0; j < Count; j++)
+    {
+        if (array[i] == array2[j])
+        {
+            isDuplicate = true;
+            break;
+        }
+    }
+
+    if (!isDuplicate)
+    {
+        array2[Count] = array[i];
+        Count++;
+    }
+}
+
+
+Console.WriteLine("array without repetition:");
+for (int i = 0; i < Count; i++)
+{
+    Console.Write(array2[i] + " ");
+}
+*/
+
+
+/*
+// برنامه ای بنویسید که مشخص کند دو آرایه با هم برابر هستند یا خیر؟
+
+
+int[] array1 = { 1, 3, 5, 3, 7, 5, 9, 5 };
+int[] array2 = { 1, 3, 5, 3, 7, 5, 9, 5, };
+
+bool equal=false;
+
+for (int i = 0; i < array1.Length; i++)
+{
+
+    if (array1[i] != array2[i])
+    {
+        equal = true;
+    }
+    else
+    {
+        equal = false;
+    }
+
+}
+
+if (array1.Length != array2.Length)
+{
+    equal = true;
+}
+
+
+if (equal)
+{
+    Console.WriteLine("arras not equal");
+}
+else
+{
+    Console.WriteLine("arras is equal");
+}
+*/
