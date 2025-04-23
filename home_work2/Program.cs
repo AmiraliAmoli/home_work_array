@@ -555,3 +555,230 @@ else
     Console.WriteLine("arras is equal");
 }
 */
+
+
+
+/*
+
+ //برنامه ای بنویسید که تمام  0های آرایه را به انتهای آرایه منتقل نماید.
+
+
+int[] array = {45,8,0,5,5,0,0,4,777 };
+
+Console.Write("array: ");
+foreach (int i in array)
+{
+    Console.Write(i + " ");
+
+}
+Console.WriteLine();
+
+
+
+
+int last= array.Length-1;
+int a,b,c;
+Console.WriteLine();
+
+
+for (int i = 0; i <= last; i++)
+{
+    if (array[i] == 0)
+    {
+        array[i] = array[last];
+        array[last] = 0;
+        last -= 1;
+    }
+    
+}
+
+
+
+for (int i = 0; i < array.Length; i++)
+{
+    Console.Write(array[i]+" ");
+}
+
+*/
+
+
+
+/*
+ //برنام های بنویسید که یک آرایه را در خلاف جهت عقربه های ساعت شیفت دهد.
+
+
+int[] array = { 45, 8, 0, 5, 5, 0, 0, 4, 777 };
+
+Console.Write("array: ");
+foreach (int i in array)
+{
+    Console.Write(i + " ");
+
+}
+Console.WriteLine();
+
+
+Array.Reverse(array);
+
+
+Console.Write("array afoter shift: ");
+foreach (int i in array)
+{
+    Console.Write(i + " ");
+
+}
+*/
+
+
+/*
+ //برنامه ای بنویسید که تمام اعداد منفی سمت چپ آرایه و اعداد مثبت سمت راست آرایه قرار گیرد.
+
+int[] array = {45,-98,-5,45,54,32,36,5,6,54,-9,0,-6,7,-2};
+
+Console.Write("array : ");
+foreach (int i in array)
+{
+    Console.Write(i + " ");
+
+}
+Console.WriteLine();
+
+
+Array.Sort(array);
+
+
+Console.Write("array afoter sort: ");
+foreach (int i in array)
+{
+    Console.Write(i + " ");
+
+}
+*/
+
+
+
+/*
+//برنامه ای بنویسید که نام و شماره دانشجویی و معدل دانشجویان کلاس را دریافت و لیست افرادی
+//که معدل آن های بیشتر از میانگین کلاس است را چاپ نماید
+
+Console.Write("How many students do you want to enter?");
+int counter = Convert.ToInt32(Console.ReadLine());
+string[,] students =new string[counter, 3];
+Console.WriteLine();
+
+string fullName, avrage, studentCode;
+
+for (int i = 0; i < counter; i++)
+{
+    for (int j = 0; j < 3; j++)
+    {
+
+        Console.Write("enter fullname:");
+        fullName = Console.ReadLine();
+        students[i, j] = fullName;
+        j++;
+
+        Console.Write("enter studen code:");
+        studentCode = Console.ReadLine();
+        students[i, j] = studentCode;
+        j++;
+
+        Console.Write("enter avrage:");
+        avrage = Console.ReadLine();
+        students[i, j] = avrage;
+        j++;
+    }
+    Console.WriteLine();
+}
+
+
+double sum = 0,avg;
+for (int i = 0; i < counter; i++)
+{
+    sum +=Convert.ToDouble( students[i, 2]);
+}
+
+avg=sum/counter;
+Console.WriteLine("total avg class{0}:",avg);
+
+
+for (int i = 0; i < counter; i++)
+{
+    if (Convert.ToDouble(students[i,2])>avg)
+    {
+        Console.Write("name:{0} studentcode{1} avg:{2}", students[i,0], students[i, 1], students[i, 2]);
+        Console.WriteLine();
+    }
+}
+*/
+
+
+/*
+
+//برنامه ای بنویسید که دو لیست فاقد اعداد تکراری را دریافت و اشتراک آن ها را در لیست دیگری
+//بریزد
+
+Console.Write("count index of first array:");
+int n1 = int.Parse(Console.ReadLine());
+int[] array1 = new int[n1];
+for (int i = 0; i < n1; i++)
+{
+    Console.Write("enter index {0}:",i );
+    array1[i] = int.Parse(Console.ReadLine());
+}
+
+Console.Write("count index of second array: ");
+int n2 = int.Parse(Console.ReadLine());
+int[] array2 = new int[n2];
+for (int i = 0; i < n2; i++)
+{
+    Console.Write("enter index {0}:", i);
+    array2[i] = int.Parse(Console.ReadLine());
+}
+
+int[] intersection = new int[Math.Min(n1, n2)];
+int index = 0;
+
+for (int i = 0; i < array1.Length; i++)
+{
+    for (int j = 0; j < array2.Length; j++)
+    {
+        if (array1[i] == array2[j])
+        {
+            bool alreadyExists = false;
+            for (int k = 0; k < index; k++)
+            {
+                if (intersection[k] == array1[i])
+                {
+                    alreadyExists = true;
+                    break;
+                }
+            }
+
+            if (!alreadyExists)
+            {
+                intersection[index] = array1[i];
+                index++;
+            }
+
+            break;
+        }
+    }
+}
+
+Console.WriteLine("intersection:");
+if (index == 0)
+{
+    Console.WriteLine("don't there are intersection");
+}
+else
+{
+    for (int i = 0; i < index; i++)
+    {
+        Console.Write(intersection[i] + " ");
+    }
+}
+
+*/
+
+
