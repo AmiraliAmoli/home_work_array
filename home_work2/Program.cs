@@ -949,6 +949,35 @@ for (int x = 0; x < n1; x++)
 }
 */
 
+/*
+//برنامه ای بنویسید که تعدادی عدد اعشاری دریافت و واریانس آن ها را محاسبه و چاپ نماید
 
+Console.Write("enter lenght of array:");
+int n1 = int.Parse(Console.ReadLine());
+int[] array1 = new int[n1];
+int sum = 0;
+double sumvarians = 0;
+
+for (int i = 0; i < n1; i++)
+{
+    Console.Write("enter index {0} of array: ",i);
+    array1[i]=Convert.ToInt32(Console.ReadLine());   
+    sum += array1[i];
+}
+
+float avg=sum/n1;
+double pow = 0;
+
+for (int i = 0; i < n1; i++)
+{
+    
+    pow += array1[i]-avg;
+    sumvarians += Math.Pow(pow,2) ;
+}
+
+double varians=sumvarians/n1;
+
+Console.WriteLine("varians is:{0}",varians);
+*/
 
 
